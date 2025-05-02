@@ -1,0 +1,57 @@
+.itemContainer {
+  height: 380px;
+  width: 240px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.imageWrapper {
+  height: 80%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.description {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.city {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nameWrapper {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nameWrapper h3 {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.price {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  padding-bottom: 20px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
