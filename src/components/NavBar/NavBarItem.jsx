@@ -7,7 +7,7 @@ const NavBarItem = ({ item, activeTab, setActiveTab }) => {
   const router = useRouter()
   const handleClick = () => {
     setActiveTab(item.title);
-    router.push(`${item.title.toLocaleLowerCase()}`);
+    router.push(`${item.link}`);
   };
 
   return (

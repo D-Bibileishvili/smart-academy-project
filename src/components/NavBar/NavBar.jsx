@@ -3,13 +3,14 @@ import { useState } from "react";
 import styles from "./NavBar.module.css";
 import NavBarItem from "./NavBarItem";
 import { FaHome, FaChartBar, FaUsers, FaUser, FaCog } from "react-icons/fa";
+import Link from "next/link";
 
 const DATA = [
-  { id: 1, title: "Home", icon: <FaHome /> },
-  { id: 2, title: "Dashboards", icon: <FaChartBar /> },
-  { id: 3, title: "Segments", icon: <FaUsers /> },
-  { id: 4, title: "Account", icon: <FaUser /> },
-  { id: 5, title: "Settings", icon: <FaCog /> },
+  { id: 1, title: "Home", icon: <FaHome />, link: "home" },
+  { id: 2, title: "Dashboards", icon: <FaChartBar />, link: "dashboards" },
+  { id: 3, title: "Segments", icon: <FaUsers />, link: "segments" },
+  { id: 4, title: "Account", icon: <FaUser />, link: "account" },
+  { id: 5, title: "Settings", icon: <FaCog />, link: "settings" },
 ];
 
 const NavBar = () => {
