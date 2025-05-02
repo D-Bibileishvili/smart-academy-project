@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <>
     <NavBar/>
-      <section className={styles.itemContainer}>
+    
+      {/* <section className={styles.itemContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
             <Image
@@ -33,7 +34,7 @@ export default function Home() {
             <p>ბენზინი</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -55,3 +55,24 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
+/* Tab styles */
+.tabContainer {
+  height: 300px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(199, 222, 230);
+  border-radius: 20px;
+}
+
+.title{
+  margin-top: 20px;
+  color: rgb(255, 153, 0);
+}
+
+.pharagraps {
+  display: flex;
+  padding: 30px 10px;
+  color: rgb(126, 7, 236);
+}
