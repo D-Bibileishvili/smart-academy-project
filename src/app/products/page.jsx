@@ -40,9 +40,7 @@ export default function Home() {
           </div>
           <div className={styles.priceSection}>
             <span className={styles.price}>${product.price.toFixed(2)}</span>
-            {/* Optionally show old price and discount if you want to simulate */}
-            {/* <span className={styles.oldPrice}>$99.99</span>
-            <span className={styles.discount}>Save $20</span> */}
+            
           </div>
         </div>
       </Link>
