@@ -3,18 +3,24 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "@/components/NavBar/NavBar";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+  const router = useRouter();
 
   const fetchProducts = async () => {
-    console.log("fetching products..");
-    const response = await fetch("https://fakestoreapi.com/products");
+    try {
+        const response = await fetch("https://fakestoreapi.com/products");
     const result = await response.json();
     setProducts(result);
 
     console.log(result);
-  };
+  }catch (error) {
+    console.error(error)
+  }
+    }
+    
 
   useEffect(() => {
     fetchProducts();
@@ -34,7 +40,7 @@ export default function Home() {
           <p className={styles.desc}>{product.description}</p>
           <div className={styles.priceWrapper}>
             <p>${product.price}</p>
-            <button>see details</button>
+            <button onClick={() => router.push(`/products/details/${product.id}`)}>see details</button>
           </div>
         </section>
       ))}
