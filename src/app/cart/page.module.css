@@ -1,0 +1,103 @@
+.cartContainer {
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cartContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .cartTable {
+    width: 70%;
+    border-collapse: collapse;
+  }
+  
+  .cartTable th,
+  .cartTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .productInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .subText {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .quantityControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .qtyBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: not-allowed;
+  }
+  
+  .qty {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .summaryBox {
+    width: 30%;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .green {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .couponInput {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .applyBtn {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .total {
+    margin-bottom: 1rem;
+  }
+  
+  .buyBtn {
+    background: green;
+    color: white;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
