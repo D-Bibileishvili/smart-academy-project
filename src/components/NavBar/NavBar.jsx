@@ -6,15 +6,13 @@ import { FaHome, FaChartBar, FaUsers, FaUser, FaCog } from "react-icons/fa";
 import Link from "next/link";
 
 const DATA = [
-  { id: 1, title: "Home", icon: <FaHome />, link: "home" },
-  { id: 2, title: "Dashboards", icon: <FaChartBar />, link: "dashboards" },
-  { id: 3, title: "Segments", icon: <FaUsers />, link: "segments" },
-  { id: 4, title: "Account", icon: <FaUser />, link: "account" },
-  { id: 5, title: "Settings", icon: <FaCog />, link: "settings" },
+  { id: 1, title: "products",  link: "products" },
+  { id: 2, title: "cart", link: "cart" },
+  { id: 3, title: "profile", link: "profile" },
 ];
 
 const NavBar = () => {
-  const [activeTab, setActiveTab] = useState("Home");
+  const [activeTab, setActiveTab] = useState("products");
 
   return (
     <div className={styles.container}>
