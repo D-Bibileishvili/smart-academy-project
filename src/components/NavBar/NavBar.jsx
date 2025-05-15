@@ -6,9 +6,9 @@ import { FaHome, FaChartBar, FaUsers, FaUser, FaCog } from "react-icons/fa";
 import Link from "next/link";
 
 const DATA = [
-  { id: 1, title: "products",  link: "products" },
-  { id: 2, title: "cart", link: "cart" },
-  { id: 3, title: "profile", link: "profile" },
+  { id: 1, title: "products",  link: "/products" },
+  { id: 2, title: "cart", link: "/cart" },
+  { id: 3, title: "profile", link: "/profile" },
 ];
 
 const NavBar = () => {
