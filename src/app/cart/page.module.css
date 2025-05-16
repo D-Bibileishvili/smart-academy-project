@@ -51,7 +51,7 @@
     text-align: center;
     border: 1px solid #ccc;
     background: white;
-    cursor: not-allowed;
+    cursor: pointer;
   }
   
   .qty {
