@@ -32,7 +32,7 @@ export default function Home() {
       <Link href={`/products/details/${product.id}`} key={product.id}>
         <div className={styles.card}>
           <img src={product.image} alt={product.title} className={styles.image} />
-          <p className={styles.shipping}>Ships to Ukraine</p>
+          <p className={styles.shipping}>Ships to Georgia</p>
           <h3 className={styles.title}>{product.title}</h3>
           <div className={styles.rating}>
             ★ {product.rating?.rate?.toFixed(1)}
