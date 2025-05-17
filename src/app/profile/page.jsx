@@ -1,8 +1,27 @@
-const page = async ({ params }) => {
-    const { id } = await params;
-    const response = await fetch(` https://fakestoreapi.com/users/3${id}`);
-    const product = await response.json();
-    return <h1>{product.title}</h1>;
-  };
-  
-  export default page;
+import styles from "./page.module.css";
+
+const fetchProfileProduts = async (id) => {
+  const response = await fetch(`https://fakestoreapi.com/users/3`);
+  const result = await response.json();
+  return result;
+};
+
+export default async function ProfilePage() {
+  const user = await fetchProfileProduts();
+
+  return (
+    <div className={styles.profileWrap}>
+      <h1>Profile</h1>
+      <p>
+        Name: {user.name.firstname} {user.name.lastname}
+      </p>
+      <p>Username: {user.username}</p>
+      <p>Email: {user.email}</p>
+      <p>Phone: {user.phone}</p>
+      <p>
+        Addres: {user.address.number} {user.address.street} {user.address.city},{" "}
+        {user.address.zipcode}
+      </p>
+    </div>
+  );
+}

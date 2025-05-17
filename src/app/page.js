@@ -3,13 +3,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "@/components/NavBar/NavBar";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { RedirectType } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Link href="/products">Go To Produucts Page</Link>
-    </div>
-  );
+    redirect(`/products`)
 }
 
 // {/* <section className={styles.itemContainer}>
