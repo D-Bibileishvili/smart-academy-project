@@ -1,17 +1,17 @@
 .profileWrap {
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    border-radius: 10px;
-  }
-  
-  .profileWrap h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .profileWrap p {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.profileWrap h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profileWrap p {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}

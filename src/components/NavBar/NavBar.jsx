@@ -2,7 +2,17 @@
 import { useState } from "react";
 import styles from "./NavBar.module.css";
 import NavBarItem from "./NavBarItem";
-import { FaHome, FaChartBar, FaUsers, FaUser, FaCog, FaTh, FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
+import {
+  FaHome,
+  FaChartBar,
+  FaUsers,
+  FaUser,
+  FaCog,
+  FaTh,
+  FaSearch,
+  FaHeart,
+  FaShoppingCart,
+} from "react-icons/fa";
 import Link from "next/link";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsGlobe2 } from "react-icons/bs";
@@ -14,15 +24,19 @@ const DATA = [
 ];
 
 const NavBar = () => {
-  
   return (
     <nav className={styles.navbar}>
       <div className={styles.left}>
         <Link href="/" className={styles.logo}>
-          <img src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-500x281.png" alt="Amazon Logo" />
+          <img
+            src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo-500x281.png"
+            alt="Amazon Logo"
+          />
         </Link>
         <FaTh className={styles.icon} />
-        <Link href='/products'><strong>ALL Products</strong> </Link>
+        <Link href="/products">
+          <strong>ALL Products</strong>{" "}
+        </Link>
         <Link href="/products">Today's Deals</Link>
         <Link href="#">Gift Cards</Link>
         <Link href="#">Registry & Gifting</Link>
@@ -36,8 +50,10 @@ const NavBar = () => {
         <span>ENG</span>
 
         <span>USD</span>
-        <Link className={styles.custumer} href="#">Customer Service</Link>
-        
+        <Link className={styles.custumer} href="#">
+          Customer Service
+        </Link>
+
         <FaSearch />
         <span>Search</span>
 
@@ -54,5 +70,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-  

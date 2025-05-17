@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Next.js FakeStore E-commerce Clone
 
-## Getting Started
+This is a simple e-commerce frontend project built with **Next.js App Router**, styled using **CSS Modules (`page.module.css`)**, and populated with data from [FakeStore API](https://fakestoreapi.com/).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📦 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ **App Router** using `src/app/` directory
+- ✅ Pages: `/products`, `/product/details/[id]`, `/cart`, `/profile`
+- ✅ Responsive **Amazon-style NavBar**
+- ✅ **Product listing** page with dynamic styling
+- ✅ **Product details** page with individual product view
+- ✅ **Cart page** with quantity control (1–10)
+- ✅ **Profile page** fetching and displaying user info
+- ✅ Uses `useEffect`, `useState`, `async/await`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Tech Stack
 
-## Learn More
+- **Next.js** (App Router)
+- **React** (`useEffect`, `useState`)
+- **CSS Modules**
+- **React Icons**
+- **FakeStore API**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 API Endpoints Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Products**: `https://fakestoreapi.com/products`
+- **Product by ID**: `https://fakestoreapi.com/products/:id`
+- **Cart**: `https://fakestoreapi.com/carts/2`
+- **User Profile**: `https://fakestoreapi.com/users/3`
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Setup Instructions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/fakestore-nextjs.git
+   cd fakestore-nextjs
+
+   ```
+
+2. **Install dependencies**
+   npm install
+
+3. **Run the development server**
+   npm run dev
+
+4. Open http://localhost:3000 to view it in the browser.
+
+---
+
+📸 Pages Preview
+🛍️ Products Page
+Displays a grid of products like an e-commerce store.
+
+🧾 Cart Page
+Displays items in cart with quantity control (1–10), pricing, summary, and coupon section.
+
+👤 Profile Page
+Displays user profile info (name, email, phone, address).
+
+🔎 Product Details Page
+Clicking a product takes you to a full detail page with title, description, price, and image.
+
+---
+
+📌 Notes
+The cart data only provides product IDs and quantities, so product info is fetched per ID.
+
+The NavBar and Cart mimic the Amazon design using react-icons and basic flexbox.
+
+📃 License
+This project is for educational/demo purposes using publicly available API data.
+
+---

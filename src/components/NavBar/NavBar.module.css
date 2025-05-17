@@ -23,7 +23,9 @@
   height: 50px;
 }
 
-.icon, .custumer, .cart {
+.icon,
+.custumer,
+.cart {
   color: orange;
 }
 
