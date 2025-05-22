@@ -7,35 +7,20 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { usePathname, useRouter } from "next/navigation";
 
 const schema = yup.object().shape({
-  firstName: yup
-    .string()
-    .required()
-    .min(4)
-    .max(20),
+  id: yup.number().required("ID is required!").positive().integer(),
+  username: yup.string().required("sadasd").min(4).max(20),
 
-  lastName: yup
-    .string()
-    .required()
-    .min(4)
-    .max(20),
+  lastname: yup.string().required().min(4).max(20),
 
-  age: yup
-    .number()
-    .typeError()
-    .required()
-    .min(13)
-    .max(120),
+  age: yup.number().typeError().required().min(13).max(120),
 
-  email: yup
-    .string()
-    .required()
-    .email(),
+  email: yup.string().required().email(),
 
   password: yup
     .string()
     .required()
-    .min(6, )
-    .max(12, )
+    .min(6)
+    .max(12)
     .matches(/[a-z]/)
     .matches(/[A-Z]/)
     .matches(/[0-9]/),
@@ -60,7 +45,7 @@ const page = () => {
 
   const handleRegister = async (data) => {
     try {
-      const response = await fetch("https://fakestoreapi.com/users", {
+      const response = await fetch("https://jsonplaceholder.typicode.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
