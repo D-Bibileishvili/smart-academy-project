@@ -16,7 +16,7 @@ export default function CartPage() {
 
   useEffect(() => {
     const fetchCartData = async () => {
-      const res = await fetch("https://fakestoreapi.com/carts/2");
+      const res = await fetch("https://fakestoreapi.com/carts/1");
       const cart = await res.json();
 
       const productDetails = await Promise.all(
