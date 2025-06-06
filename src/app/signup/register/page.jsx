@@ -8,17 +8,17 @@ import { usePathname, useRouter } from "next/navigation";
 
 const schema = yup.object().shape({
   id: yup.number().required("ID is required!").positive().integer(),
-  username: yup.string().required("sadasd").min(4).max(20),
+  username: yup.string().required("username is required!").min(4).max(20),
 
-  lastname: yup.string().required().min(4).max(20),
+  lastname: yup.string().required("lastname is required!").min(4).max(20),
 
-  age: yup.number().typeError().required().min(13).max(120),
+  age: yup.number().typeError().required("age is required!").min(13).max(120),
 
-  email: yup.string().required().email(),
+  email: yup.string().required("email is required!").email("Invalid Email"),
 
   password: yup
     .string()
-    .required()
+    .required("password is required!")
     .min(6)
     .max(12)
     .matches(/[a-z]/)
@@ -27,7 +27,7 @@ const schema = yup.object().shape({
 
   phone: yup
     .string()
-    .required()
+    .required("phone is required!")
     .matches(/^\d{10,100}$/),
 });
 
@@ -45,11 +45,14 @@ const page = () => {
 
   const handleRegister = async (data) => {
     try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
 
@@ -74,7 +77,7 @@ const page = () => {
             className={styles.input}
             placeholder="id"
           />
-          {errors.id && <p>{errors.id.message}</p>}
+          {errors.id && <p className={styles.errorMessage}>{errors.id.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -85,7 +88,7 @@ const page = () => {
             className={styles.input}
             placeholder="username"
           />
-          {errors.username && <p>{errors.username.message}</p>}
+          {errors.username && <p className={styles.errorMessage}>{errors.username.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -96,7 +99,7 @@ const page = () => {
             className={styles.input}
             placeholder="lastname"
           />
-          {errors.lastName && <p>{errors.lastName.message}</p>}
+          {errors.lastName && <p className={styles.errorMessage}>{errors.lastName.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -107,7 +110,7 @@ const page = () => {
             className={styles.input}
             placeholder="age"
           />
-          {errors.age && <p>{errors.age.message}</p>}
+          {errors.age && <p className={styles.errorMessage}>{errors.age.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -118,7 +121,7 @@ const page = () => {
             className={styles.input}
             placeholder="email"
           />
-          {errors.email && <p>{errors.email.message}</p>}
+          {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -130,7 +133,7 @@ const page = () => {
             placeholder="password"
             type="password"
           />
-          {errors.password && <p>{errors.password.message}</p>}
+          {errors.password && <p className={styles.errorMessage}>{errors.password.message}</p>}
         </div>
 
         <div className={styles.inputWrapper}>
@@ -142,7 +145,7 @@ const page = () => {
             placeholder="phone"
             type="phone"
           />
-          {errors.phone && <p>{errors.phone.message}</p>}
+          {errors.phone && <p className={styles.errorMessage}>{errors.phone.message}</p>}
         </div>
         <button className={styles.button} type="submit">
           Sign Up
