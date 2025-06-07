@@ -14,8 +14,8 @@ const page = () => {
     const response = await fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
       body: JSON.stringify({
-        username,
-        password,
+        username: 'johnd',
+        password: 'm38rmF$',
       }),
       headers: {
         "Content-type": "application/json",
@@ -25,7 +25,8 @@ const page = () => {
     const result = await response.json();
 
     if (result?.token) {
-      redirect(`/products`);
+      localStorage.setItem('token', JSON.stringify(result.token) )
+      // redirect(`/products`);
     }
   };
 
