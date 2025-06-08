@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import LogoutButton from "@/components/LogOut/LogoutButton";
 
 const fetchProfileProduts = async (id) => {
   const response = await fetch(`https://fakestoreapi.com/users/3`);
@@ -22,6 +23,8 @@ export default async function ProfilePage() {
         Addres: {user.address.number} {user.address.street} {user.address.city},{" "}
         {user.address.zipcode}
       </p>
+
+      <LogoutButton/>
     </div>
   );
 }

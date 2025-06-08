@@ -11,7 +11,19 @@ import { useEffect } from "react";
 export default function Home() {
   const router = useRouter();
 
+  const checkUser =  () => {
+    const res =  localStorage.getItem('token');
+    const token = JSON.parse(res)
+    if (token === null) {
+      redirect('/signup/login')
+    }else{
+      redirect('/products')
+    }
+
+  }
+
   useEffect(() => {
+    checkUser()
     console.log(router.replace("/signup/login"));
   });
 }

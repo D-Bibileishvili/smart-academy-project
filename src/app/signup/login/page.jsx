@@ -26,7 +26,7 @@ const page = () => {
 
     if (result?.token) {
       localStorage.setItem('token', JSON.stringify(result.token) )
-      // redirect(`/products`);
+      redirect(`/products`);
     }
   };
 
