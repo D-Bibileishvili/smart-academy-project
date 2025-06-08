@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import LogoutButton from "@/components/LogOut/LogoutButton";
 
 const fetchProfileProduts = async (id) => {
-  const response = await fetch(`https://fakestoreapi.com/users/3`);
+  const response = await fetch(`https://fakestoreapi.com/users/1`);
   const result = await response.json();
   return result;
 };

@@ -154,7 +154,7 @@ const page = () => {
       <Link href={"/signup/login"}>
         <button className={styles.notResgitered}>
           Already Registered? sign in
-        </button>
+        </button>NPM RUN S
       </Link>
     </div>
   );
