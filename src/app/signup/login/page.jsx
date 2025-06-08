@@ -2,11 +2,13 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const page = () => {
+  const router = useRouter();
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -14,8 +16,8 @@ const page = () => {
     const response = await fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
       body: JSON.stringify({
-        username: 'johnd',
-        password: 'm38rmF$',
+        username,
+        password,
       }),
       headers: {
         "Content-type": "application/json",
@@ -25,8 +27,10 @@ const page = () => {
     const result = await response.json();
 
     if (result?.token) {
-      localStorage.setItem('token', JSON.stringify(result.token) )
-      redirect(`/products`);
+      if (rememberMe) {
+        localStorage.setItem("token", JSON.stringify(result.token));
+      }
+      router.push(`/products`);
     }
   };
 
@@ -46,6 +50,17 @@ const page = () => {
           placeholder="password"
           onChange={(event) => setPassword(event.target.value)}
         />
+
+        <div>
+          <input
+            type="checkbox"
+            id="rememberMe"
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+          />
+          <label htmlFor="rememberMe">Remember Me</label>
+        </div>
+
         <button className={styles.button} type="submit">
           Sign In
         </button>
