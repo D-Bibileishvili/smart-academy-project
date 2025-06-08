@@ -14,8 +14,6 @@ export default function Home() {
       const response = await fetch("https://fakestoreapi.com/products");
       const result = await response.json();
       setProducts(result);
-
-      console.log(result);
     } catch (error) {
       console.error(error);
     }

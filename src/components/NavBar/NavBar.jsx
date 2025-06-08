@@ -19,7 +19,7 @@ import { BsGlobe2 } from "react-icons/bs";
 
 const DATA = [
   { id: 1, title: "products", link: "/products" },
-  { id: 2, title: "cart", link: "/cart" },
+  { id: 2, title: "cart", link: "/carts" },
   { id: 3, title: "profile", link: "/profile" },
 ];
 
@@ -61,7 +61,7 @@ const NavBar = () => {
           <FaUser />
         </Link>
         <FaHeart />
-        <Link className={styles.cart} href="/cart">
+        <Link className={styles.cart} href="/carts">
           <FaShoppingCart />
         </Link>
       </div>

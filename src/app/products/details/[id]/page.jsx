@@ -1,3 +1,4 @@
+import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
 import styles from "./page.module.css";
 
 const page = async ({ params }) => {
@@ -13,6 +14,7 @@ const page = async ({ params }) => {
         <div className={styles.priceSection}>
           <span className={styles.price}>${product.price.toFixed(2)}</span>
         </div>
+        <div><AddToCartButton product={product}/></div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import LogoutButton from "@/components/LogOut/LogoutButton";
+import LogOutButton from "@/components/LogOut/LogoutButton";
 
 const fetchProfileProduts = async (id) => {
   const response = await fetch(`https://fakestoreapi.com/users/1`);
@@ -24,7 +24,7 @@ export default async function ProfilePage() {
         {user.address.zipcode}
       </p>
 
-      <LogoutButton/>
+      <LogOutButton/>
     </div>
   );
 }
