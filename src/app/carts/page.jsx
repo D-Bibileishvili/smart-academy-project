@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { addToCart } from "@/lib/slices/cartSlice";
+import { addToCart, decreaseQuantity } from "@/lib/slices/cartSlice";
 
 const page = () => {
   const cartProducts = useAppSelector((store) => store.cart.items);
@@ -10,6 +10,11 @@ const page = () => {
   const handleAddMore = (item) => {
     dispatch(addToCart(item));
   };
+
+  const handleDecrease = (item) => {
+    dispatch(decreaseQuantity(item));
+  };
+
   return (
     <div>
       {cartProducts.map((item) => (
@@ -17,7 +22,7 @@ const page = () => {
           <h2>{item.title}</h2>
           <button onClick={() => handleAddMore(item)}>plus 1</button>
           <p>{item.quantity}</p>
-          <button>minus 1</button>
+          <button onClick={() => handleDecrease(item)}>minus 1</button>
         </div>
       ))}
     </div>
