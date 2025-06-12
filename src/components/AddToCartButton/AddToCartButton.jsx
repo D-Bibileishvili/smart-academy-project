@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./AddToCartButton.module.css";
+
 import { useAppDispatch } from "@/lib/hooks";
 import { addToCart } from "@/lib/slices/cartSlice";
 
@@ -9,7 +11,7 @@ const AddToCartButton = ({ product }) => {
   const handleAddToCart = () => {
     dispatch(addToCart(product))
   };
-  return <button onClick={handleAddToCart}>add to cart </button>;
+  return <button className={styles.addToCardBtn} onClick={handleAddToCart}>add to cart </button>;
 };
 
 export default AddToCartButton;
